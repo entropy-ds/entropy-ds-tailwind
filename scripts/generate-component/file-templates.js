@@ -13,15 +13,15 @@ const ${componentName} = (props: ${componentName}Props, ref: ForwardedRef<HTMLDi
 export default forwardRef(${componentName});
 `;
 
-const storyTemplate = (componentName) => `import { ComponentStory, ComponentMeta } from '@storybook/react';
+const storyTemplate = (componentName) => `import { StoryFn, Meta } from '@storybook/react';
 import { ${componentName} } from '.';
 
 export default {
   title: 'Components/${componentName}',
   component: ${componentName},
-} as ComponentMeta<typeof ${componentName}>;
+} as Meta<typeof ${componentName}>;
 
-const Template: ComponentStory<typeof ${componentName}> = (args) => (
+const Template: StoryFn<typeof ${componentName}> = (args) => (
   <${componentName} {...args}>${componentName}</${componentName}>
 );
 
