@@ -16,7 +16,7 @@
     "component": "node scripts/generate-component",
     "dev": "storybook dev -p 6006",
     "build": "npm run clean && npm run build:tailwind && rollup -c",
-    "build:tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css",
+    "build:tailwind": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css",
     "build:storybook": "storybook build"
   },
   "devDependencies": {
